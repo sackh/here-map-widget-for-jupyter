@@ -1,7 +1,7 @@
 DomIcon Object
 ==============
 
-``DomIcon`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize a marker with a custom DomIcon on the Map.
+``DomIcon`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize a marker with a custom DomIcon on the Map.
 
 Example
 -------

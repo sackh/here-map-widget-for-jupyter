@@ -1,7 +1,7 @@
 Choropleth Layer
 ================
 
-``Choropleth`` is an ``here-map-widget-for-juptyer`` class that allows you to generate a Choropleth Map for your data.
+``Choropleth`` is an ``here-map-widget-for-jupyter`` class that allows you to generate a Choropleth Map for your data.
 
 Example
 -------

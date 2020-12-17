@@ -53,7 +53,7 @@ def _jupyter_nbextension_paths():
         {
             "section": "notebook",
             "src": "static",
-            "dest": "map-widget-for-juptyer",
-            "require": "map-widget-for-juptyer/extension",
+            "dest": "map-widget-for-jupyter",
+            "require": "map-widget-for-jupyter/extension",
         }
     ]

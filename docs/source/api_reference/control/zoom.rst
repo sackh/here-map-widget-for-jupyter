@@ -1,7 +1,7 @@
 Zoom Control
 ============
 
-``Zoom Control`` is an ``here-map-widget-for-juptyer`` class that represents the UI control that allows the user to change the map zoom level.
+``Zoom Control`` is an ``here-map-widget-for-jupyter`` class that represents the UI control that allows the user to change the map zoom level.
 
 Example
 -------

@@ -1,7 +1,7 @@
 Vector Basemaps
 ===============
 
-``Vector Basemaps`` are pre-configured set of HERE layers for convenient use as basemap supported by ``here-map-widget-for-juptyer``.
+``Vector Basemaps`` are pre-configured set of HERE layers for convenient use as basemap supported by ``here-map-widget-for-jupyter``.
 Detailed information about vector basemaps supported by ``HERE Maps API for JavaScript`` can be found `here <https://developer.here.com/documentation/maps/3.1.20.0/dev_guide/topics/vector.html>`_.
 
 Example

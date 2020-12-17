@@ -1,7 +1,7 @@
 Map Settings Control
 ====================
 
-``Map Settings Control`` is an ``here-map-widget-for-juptyer`` class that allows you to add a control that allows the user to select the base map types as well as add additional layers on top.
+``Map Settings Control`` is an ``here-map-widget-for-jupyter`` class that allows you to add a control that allows the user to select the base map types as well as add additional layers on top.
 
 Example
 -------

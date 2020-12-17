@@ -1,7 +1,7 @@
 Icon Object
 ===========
 
-``Icon`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize a marker with a custom Icon on the Map.
+``Icon`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize a marker with a custom Icon on the Map.
 
 Example
 -------

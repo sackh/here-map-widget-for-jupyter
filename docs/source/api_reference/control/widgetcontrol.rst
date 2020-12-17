@@ -1,7 +1,7 @@
 Widget Control
 ==============
 
-``Widget Control`` is an ``here-map-widget-for-juptyer`` class that allows integration of various ipywidgets with ``here-map-widget-for-juptyer``.
+``Widget Control`` is an ``here-map-widget-for-jupyter`` class that allows integration of various ipywidgets with ``here-map-widget-for-jupyter``.
 
 Example
 -------

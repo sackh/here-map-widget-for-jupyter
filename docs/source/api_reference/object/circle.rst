@@ -1,7 +1,7 @@
 Circle Object
 =============
 
-``Circle`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize a circle on the Map.
+``Circle`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize a circle on the Map.
 Style of object is a dictionary, to get more information on all possible keys of style dictionary, please check this `link <https://developer.here.com/documentation/maps/3.1.20.0/dev_guide/topics/geo-shapes.html>`_.
 
 Example

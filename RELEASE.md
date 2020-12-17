@@ -10,7 +10,7 @@ git add and git commit
 git push
 git push --tags
 
-- To release a new version of @here/map-widget-for-juptyer on NPM:
+- To release a new version of @here/map-widget-for-jupyter on NPM:
 
 Update `js/package.json` with new npm package version
 

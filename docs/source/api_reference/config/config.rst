@@ -1,6 +1,6 @@
 Configs
 -----------
-This section describes various configuration options supported by ``here-map-widget-for-juptyer``.
+This section describes various configuration options supported by ``here-map-widget-for-jupyter``.
 
 .. toctree::
    :maxdepth: 1

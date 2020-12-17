@@ -1,7 +1,7 @@
 Style Element
 ==============
 
-``Style`` is an ``here-map-widget-for-juptyer`` class that allows to configure style for various elements of the Map.
+``Style`` is an ``here-map-widget-for-jupyter`` class that allows to configure style for various elements of the Map.
 
 Example
 -------

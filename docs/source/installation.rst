@@ -7,7 +7,7 @@ To add npm registry:
 
 To install use pip:
 
-    $ pip install here-map-widget-for-juptyer
+    $ pip install here-map-widget-for-jupyter
 
     $ jupyter nbextension install --py --sys-prefix here_map_widget
 
@@ -15,7 +15,7 @@ To install use pip:
 
 To install for jupyterlab
 
-    $ jupyter labextension install @jupyter-widgets/jupyterlab-manager @here/map-widget-for-juptyer
+    $ jupyter labextension install @jupyter-widgets/jupyterlab-manager @here/map-widget-for-jupyter
 
     $ jupyter lab build --dev-build=False --minimize=False
 
@@ -30,7 +30,7 @@ Installation Example
 
     $ npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/here-node/
 
-    $ pip install here-map-widget-for-juptyer
+    $ pip install here-map-widget-for-jupyter
     Collecting ipywidgets
       Using cached ipywidgets-7.5.1-py2.py3-none-any.whl (121 kB)
     Collecting branca
@@ -66,7 +66,7 @@ Installation Example
       Using cached backcall-0.2.0-py2.py3-none-any.whl (11 kB)
     Collecting pygments
       Using cached Pygments-2.7.1-py3-none-any.whl (944 kB)
-    Requirement already satisfied: setuptools>=18.5 in /Users/omestry/opt/miniconda3/envs/test_123/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets->here-map-widget-for-juptyer==0.1.0a0) (50.3.0.post20201006)
+    Requirement already satisfied: setuptools>=18.5 in /Users/omestry/opt/miniconda3/envs/test_123/lib/python3.7/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets->here-map-widget-for-jupyter==0.1.0a0) (50.3.0.post20201006)
     Collecting jedi>=0.10
       Using cached jedi-0.17.2-py2.py3-none-any.whl (1.4 MB)
     Collecting pickleshare
@@ -135,11 +135,11 @@ Installation Example
       Using cached pycparser-2.20-py2.py3-none-any.whl (112 kB)
     Collecting pyparsing>=2.0.2
       Using cached pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
-    Installing collected packages: wcwidth, prompt-toolkit, ptyprocess, pexpect, ipython-genutils, traitlets, decorator, backcall, appnope, pygments, parso, jedi, pickleshare, ipython, tornado, jupyter-core, pyzmq, six, python-dateutil, jupyter-client, ipykernel, zipp, importlib-metadata, pyrsistent, attrs, jsonschema, nbformat, entrypoints, pandocfilters, async-generator, nest-asyncio, nbclient, mistune, MarkupSafe, jinja2, testpath, jupyterlab-pygments, defusedxml, pyparsing, packaging, webencodings, bleach, nbconvert, prometheus-client, pycparser, cffi, argon2-cffi, terminado, Send2Trash, notebook, widgetsnbextension, ipywidgets, branca, here-map-widget-for-juptyer
-    Successfully installed MarkupSafe-1.1.1 Send2Trash-1.5.0 appnope-0.1.0 argon2-cffi-20.1.0 async-generator-1.10 attrs-20.2.0 backcall-0.2.0 bleach-3.2.1 branca-0.4.1 cffi-1.14.3 decorator-4.4.2 defusedxml-0.6.0 entrypoints-0.3 here-map-widget-for-juptyer-0.1.0a0 importlib-metadata-2.0.0 ipykernel-5.3.4 ipython-7.18.1 ipython-genutils-0.2.0 ipywidgets-7.5.1 jedi-0.17.2 jinja2-2.11.2 jsonschema-3.2.0 jupyter-client-6.1.7 jupyter-core-4.6.3 jupyterlab-pygments-0.1.2 mistune-0.8.4 nbclient-0.5.0 nbconvert-6.0.7 nbformat-5.0.7 nest-asyncio-1.4.1 notebook-6.1.4 packaging-20.4 pandocfilters-1.4.2 parso-0.7.1 pexpect-4.8.0 pickleshare-0.7.5 prometheus-client-0.8.0 prompt-toolkit-3.0.7 ptyprocess-0.6.0 pycparser-2.20 pygments-2.7.1 pyparsing-2.4.7 pyrsistent-0.17.3 python-dateutil-2.8.1 pyzmq-19.0.2 six-1.15.0 terminado-0.9.1 testpath-0.4.4 tornado-6.0.4 traitlets-5.0.4 wcwidth-0.2.5 webencodings-0.5.1 widgetsnbextension-3.5.1 zipp-3.3.0
+    Installing collected packages: wcwidth, prompt-toolkit, ptyprocess, pexpect, ipython-genutils, traitlets, decorator, backcall, appnope, pygments, parso, jedi, pickleshare, ipython, tornado, jupyter-core, pyzmq, six, python-dateutil, jupyter-client, ipykernel, zipp, importlib-metadata, pyrsistent, attrs, jsonschema, nbformat, entrypoints, pandocfilters, async-generator, nest-asyncio, nbclient, mistune, MarkupSafe, jinja2, testpath, jupyterlab-pygments, defusedxml, pyparsing, packaging, webencodings, bleach, nbconvert, prometheus-client, pycparser, cffi, argon2-cffi, terminado, Send2Trash, notebook, widgetsnbextension, ipywidgets, branca, here-map-widget-for-jupyter
+    Successfully installed MarkupSafe-1.1.1 Send2Trash-1.5.0 appnope-0.1.0 argon2-cffi-20.1.0 async-generator-1.10 attrs-20.2.0 backcall-0.2.0 bleach-3.2.1 branca-0.4.1 cffi-1.14.3 decorator-4.4.2 defusedxml-0.6.0 entrypoints-0.3 here-map-widget-for-jupyter-0.1.0a0 importlib-metadata-2.0.0 ipykernel-5.3.4 ipython-7.18.1 ipython-genutils-0.2.0 ipywidgets-7.5.1 jedi-0.17.2 jinja2-2.11.2 jsonschema-3.2.0 jupyter-client-6.1.7 jupyter-core-4.6.3 jupyterlab-pygments-0.1.2 mistune-0.8.4 nbclient-0.5.0 nbconvert-6.0.7 nbformat-5.0.7 nest-asyncio-1.4.1 notebook-6.1.4 packaging-20.4 pandocfilters-1.4.2 parso-0.7.1 pexpect-4.8.0 pickleshare-0.7.5 prometheus-client-0.8.0 prompt-toolkit-3.0.7 ptyprocess-0.6.0 pycparser-2.20 pygments-2.7.1 pyparsing-2.4.7 pyrsistent-0.17.3 python-dateutil-2.8.1 pyzmq-19.0.2 six-1.15.0 terminado-0.9.1 testpath-0.4.4 tornado-6.0.4 traitlets-5.0.4 wcwidth-0.2.5 webencodings-0.5.1 widgetsnbextension-3.5.1 zipp-3.3.0
 
-    $ jupyter nbextension enable --py --sys-prefix here-map-widget-for-juptyer
-    Enabling notebook extension here-map-widget-for-juptyer/extension...
+    $ jupyter nbextension enable --py --sys-prefix here-map-widget-for-jupyter
+    Enabling notebook extension here-map-widget-for-jupyter/extension...
           - Validating: OK
 
     $ jupyter labextension install @jupyter-widgets/jupyterlab-manager @here/maps-api-for-javascript-widget-for-jupyter-noteboo

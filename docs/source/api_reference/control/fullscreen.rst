@@ -1,7 +1,7 @@
 Fullscreen Control
 ===================
 
-``Fullscreen Control`` is an ``here-map-widget-for-juptyer`` class that allows you to add a control which contains a button that will put the Map in full-screen when clicked.
+``Fullscreen Control`` is an ``here-map-widget-for-jupyter`` class that allows you to add a control which contains a button that will put the Map in full-screen when clicked.
 
 Example
 -------

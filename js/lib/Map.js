@@ -33,8 +33,8 @@ export class MapModel extends widgets.DOMWidgetModel {
       //      ...super.defaults(),
       _view_name: 'MapView',
       _model_name: 'MapModel',
-      _model_module: 'map-widget-for-juptyer',
-      _view_module: 'map-widget-for-juptyer',
+      _model_module: 'map-widget-for-jupyter',
+      _view_module: 'map-widget-for-jupyter',
 
       api_key: "",
       center: DEFAULT_LOCATION,

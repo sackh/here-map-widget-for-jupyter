@@ -1,7 +1,7 @@
 Overlay Object
 ==============
 
-``Overlay`` is an ``here-map-widget-for-juptyer`` class that allows you to visual a rectangular area on a Map in the form of a bitmap.
+``Overlay`` is an ``here-map-widget-for-jupyter`` class that allows you to visual a rectangular area on a Map in the form of a bitmap.
 
 Example
 -------

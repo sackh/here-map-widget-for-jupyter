@@ -31,8 +31,8 @@ export class ServiceModel extends widgets.WidgetModel {
       //      ...super.defaults(),
       _view_name: 'ServiceView',
       _model_name: 'ServiceModel',
-      _view_module: 'map-widget-for-juptyer',
-      _model_module: 'map-widget-for-juptyer',
+      _view_module: 'map-widget-for-jupyter',
+      _model_module: 'map-widget-for-jupyter',
     };
   }
 }

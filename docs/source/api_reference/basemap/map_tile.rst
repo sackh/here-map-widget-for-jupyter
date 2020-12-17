@@ -1,7 +1,7 @@
 Map Tile Basemap
 ================
 
-``MapTile Basemap`` is the type of basemap of ``here-map-widget-for-juptyer`` which shows basemap using `Map Tile API <https://developer.here.com/documentation/map-tile/dev_guide/topics/introduction.html>`_.
+``MapTile Basemap`` is the type of basemap of ``here-map-widget-for-jupyter`` which shows basemap using `Map Tile API <https://developer.here.com/documentation/map-tile/dev_guide/topics/introduction.html>`_.
 
 Example
 -------

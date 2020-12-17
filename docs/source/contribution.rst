@@ -67,9 +67,9 @@ Development
 
 For a development installation (requires npm),
 
-    $ git clone https://github.com/heremaps/here-map-widget-for-juptyer.git
+    $ git clone https://github.com/heremaps/here-map-widget-for-jupyter.git
 
-    $ cd here-map-widget-for-juptyer
+    $ cd here-map-widget-for-jupyter
 
     $ pip install -e .
 

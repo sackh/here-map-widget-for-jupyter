@@ -1,7 +1,7 @@
 HeatMap Layer
 =============
 
-``Heat Map`` is an ``here-map-widget-for-juptyer`` class that allows you to generate a Heat Map for your data.
+``Heat Map`` is an ``here-map-widget-for-jupyter`` class that allows you to generate a Heat Map for your data.
 
 Example
 -------

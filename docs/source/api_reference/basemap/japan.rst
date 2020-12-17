@@ -1,7 +1,7 @@
 Japan Basemap
 ==============
 
-``Japan Basemap`` is the type of basemap of ``here-map-widget-for-juptyer`` which shows basemap data for Japan.
+``Japan Basemap`` is the type of basemap of ``here-map-widget-for-jupyter`` which shows basemap data for Japan.
 For more information on basemap with Japan data please check this `link <https://developer.here.com/documentation/maps/3.1.20.0/dev_guide/topics/get-started-japan.html>`_.
 
 Example

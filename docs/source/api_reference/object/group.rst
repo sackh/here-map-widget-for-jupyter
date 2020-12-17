@@ -1,7 +1,7 @@
 Group Object
 ============
 
-``Group`` is an ``here-map-widget-for-juptyer`` class that is a container for other map objects.
+``Group`` is an ``here-map-widget-for-jupyter`` class that is a container for other map objects.
 
 Example
 -------

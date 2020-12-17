@@ -1,7 +1,7 @@
 Measurement Control
 ===================
 
-``Measurement Control`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize a distance measurement control on the Map.
+``Measurement Control`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize a distance measurement control on the Map.
 
 Example
 -------

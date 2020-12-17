@@ -1,7 +1,7 @@
 Scale Bar Control
 =================
 
-``Scale Bar Control`` is an ``here-map-widget-for-juptyer`` class that represents a UI element that shows the zoom scale.
+``Scale Bar Control`` is an ``here-map-widget-for-jupyter`` class that represents a UI element that shows the zoom scale.
 
 Example
 -------

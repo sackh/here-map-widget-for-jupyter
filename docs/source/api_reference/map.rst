@@ -1,7 +1,7 @@
 Map
 =======
 
-``Map`` is a ``here-map-widget-for-juptyer`` class that allows making a Map view and all other elements are added on this base object.
+``Map`` is a ``here-map-widget-for-jupyter`` class that allows making a Map view and all other elements are added on this base object.
 
 Example
 -------

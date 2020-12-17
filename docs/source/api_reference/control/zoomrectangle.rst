@@ -1,7 +1,7 @@
 Zoom Rectangle Control
 ======================
 
-``Zoom Rectangle Control`` is an ``here-map-widget-for-juptyer`` class that represents a zoom rectangle control element that allows zooming to the selected area on the screen.
+``Zoom Rectangle Control`` is an ``here-map-widget-for-jupyter`` class that represents a zoom rectangle control element that allows zooming to the selected area on the screen.
 
 Example
 -------

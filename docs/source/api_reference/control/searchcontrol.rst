@@ -1,7 +1,7 @@
 Search Control
 ===============
 
-``Search Control`` is an ``here-map-widget-for-juptyer`` class that allows you to search address and data on the Map.
+``Search Control`` is an ``here-map-widget-for-jupyter`` class that allows you to search address and data on the Map.
 
 Example
 -------

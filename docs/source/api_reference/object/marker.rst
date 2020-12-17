@@ -1,7 +1,7 @@
 Marker Object
 =============
 
-``Marker`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize an icon on the Map. A "normal" marker that uses a static image as an icon. Large numbers of markers of this types can be added to the map very quickly and efficiently.
+``Marker`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize an icon on the Map. A "normal" marker that uses a static image as an icon. Large numbers of markers of this types can be added to the map very quickly and efficiently.
 
 Example
 -------

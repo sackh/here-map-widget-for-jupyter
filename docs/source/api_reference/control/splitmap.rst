@@ -1,7 +1,7 @@
 Split Map Control
 =================
 
-``Split Map Control`` is an ``here-map-widget-for-juptyer`` class that allows comparing layers by splitting the map in two.
+``Split Map Control`` is an ``here-map-widget-for-jupyter`` class that allows comparing layers by splitting the map in two.
 
 Example
 -------

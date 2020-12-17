@@ -1,7 +1,7 @@
 XYZ Space Layer
 ================
 
-``XYZ`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize a `XYZ Space
+``XYZ`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize a `XYZ Space
 <https://www.here.xyz/api/>`_ on the Map.
 
 Example

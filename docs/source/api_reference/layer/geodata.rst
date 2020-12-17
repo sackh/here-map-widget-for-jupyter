@@ -1,7 +1,7 @@
 GeoData Layer
 ==============
 
-``GeoData`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize a `GeoDataFrame
+``GeoData`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize a `GeoDataFrame
 <http://geopandas.org/data_structures.html>`_ on the Map.
 
 Example

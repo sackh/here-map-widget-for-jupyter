@@ -1,7 +1,7 @@
 DomMarker Object
 ================
 
-``DomMarker`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize a DomIcon on the Map. A marker which supports HTML (and SVG) content, which can be dynamic. Markers of this type are best displayed individually or in small sets.
+``DomMarker`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize a DomIcon on the Map. A marker which supports HTML (and SVG) content, which can be dynamic. Markers of this type are best displayed individually or in small sets.
 
 Example
 -------

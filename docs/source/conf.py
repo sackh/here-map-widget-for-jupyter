@@ -27,7 +27,7 @@ release = '0.1.0'
 # Output file base name for HTML help builder.
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-htmlhelp_basename = 'here-map-widget-for-juptyer-doc'
+htmlhelp_basename = 'here-map-widget-for-jupyter-doc'
 html_static_path = ['_static']
 
 #PDf Output

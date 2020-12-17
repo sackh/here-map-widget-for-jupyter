@@ -1,7 +1,7 @@
 GeoJSON
 =======
 
-``GeoJSON`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize a `GeoJSON Data
+``GeoJSON`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize a `GeoJSON Data
 <https://geojson.org/>`_ on the Map.
 
 Example

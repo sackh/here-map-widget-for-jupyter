@@ -1,7 +1,7 @@
 Controls
 -----------
 
-This are the various UI controls supported by ``here-map-widget-for-juptyer``
+This are the various UI controls supported by ``here-map-widget-for-jupyter``
 
 .. toctree::
    :maxdepth: 1

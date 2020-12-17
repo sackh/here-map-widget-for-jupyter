@@ -22,6 +22,6 @@
   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-__webpack_public_path__ = document.querySelector('body').getAttribute('data-base-url') + 'nbextensions/map-widget-for-juptyer/';
+__webpack_public_path__ = document.querySelector('body').getAttribute('data-base-url') + 'nbextensions/map-widget-for-jupyter/';
 
 module.exports = require('./index.js');

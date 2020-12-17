@@ -43,19 +43,19 @@ To add npm registry:
     
 To install use pip:
 
-    $ pip install here-map-widget-for-juptyer
+    $ pip install here-map-widget-for-jupyter
     $ jupyter nbextension install --py --sys-prefix here_map_widget
     $ jupyter nbextension enable here_map_widget --py --sys-prefix
 
 To install for jupyterlab
 
-    $ jupyter labextension install @jupyter-widgets/jupyterlab-manager @here/map-widget-for-juptyer
+    $ jupyter labextension install @jupyter-widgets/jupyterlab-manager @here/map-widget-for-jupyter
 
 
 For a development installation (requires npm),
 
-    $ git clone https://github.com/heremaps/here-map-widget-for-juptyer.git
-    $ cd here-map-widget-for-juptyer
+    $ git clone https://github.com/heremaps/here-map-widget-for-jupyter.git
+    $ cd here-map-widget-for-jupyter
     $ pip install -e .
     $ jupyter nbextension install --py --symlink --sys-prefix here_map_widget
     $ jupyter nbextension enable --py --sys-prefix here_map_widget

@@ -175,14 +175,14 @@ dependency_links = [
 with open(os.path.join(node_root, 'package.json')) as fj:
     package_json = json.load(fj)
 
-tgz = '%s-%s.tgz' % ('here-map-widget-for-juptyer', package_json['version'])
+tgz = '%s-%s.tgz' % ('here-map-widget-for-jupyter', package_json['version'])
 
 setup_args = {
     'version': version_ns['__version__'],
     'include_package_data': True,
     'data_files': [
-        ('share/jupyter/nbextensions/map-widget-for-juptyer', glob('here_map_widget/static/*')),
-        ('etc/jupyter/nbconfig/notebook.d', ['map-widget-for-juptyer.json']),
+        ('share/jupyter/nbextensions/map-widget-for-jupyter', glob('here_map_widget/static/*')),
+        ('etc/jupyter/nbconfig/notebook.d', ['map-widget-for-jupyter.json']),
         ('share/jupyter/lab/extensions', ['js/' + tgz]),
     ],
     'install_requires': install_requires,
@@ -197,7 +197,7 @@ setup_args = {
     },
 
     'project_urls': {
-        "Source": "ssh://git@github.com:heremaps/here-map-widget-for-juptyer.git"
+        "Source": "ssh://git@github.com:heremaps/here-map-widget-for-jupyter.git"
     },
     'long_description': long_description,
     'long_description_content_type': 'text/markdown',

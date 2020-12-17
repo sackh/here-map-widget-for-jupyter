@@ -85,8 +85,8 @@ class Element(Widget):
 
     _view_name = Unicode("ElementView").tag(sync=True)
     _model_name = Unicode("ElementModel").tag(sync=True)
-    _view_module = Unicode("map-widget-for-juptyer").tag(sync=True)
-    _model_module = Unicode("map-widget-for-juptyer").tag(sync=True)
+    _view_module = Unicode("map-widget-for-jupyter").tag(sync=True)
+    _model_module = Unicode("map-widget-for-jupyter").tag(sync=True)
     _view_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
     _model_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
 
@@ -120,8 +120,8 @@ class Provider(Widget):
 
     _view_name = Unicode("ProviderView").tag(sync=True)
     _model_name = Unicode("ProviderModel").tag(sync=True)
-    _view_module = Unicode("map-widget-for-juptyer").tag(sync=True)
-    _model_module = Unicode("map-widget-for-juptyer").tag(sync=True)
+    _view_module = Unicode("map-widget-for-jupyter").tag(sync=True)
+    _model_module = Unicode("map-widget-for-jupyter").tag(sync=True)
     _view_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
     _model_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
 
@@ -242,8 +242,8 @@ class Layer(Widget):
 
     _view_name = Unicode("LayerView").tag(sync=True)
     _model_name = Unicode("LayerModel").tag(sync=True)
-    _view_module = Unicode("map-widget-for-juptyer").tag(sync=True)
-    _model_module = Unicode("map-widget-for-juptyer").tag(sync=True)
+    _view_module = Unicode("map-widget-for-jupyter").tag(sync=True)
+    _model_module = Unicode("map-widget-for-jupyter").tag(sync=True)
     _view_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
     _model_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
 
@@ -529,8 +529,8 @@ class Object(Widget):
 
     _view_name = Unicode("ObjectView").tag(sync=True)
     _model_name = Unicode("ObjectModel").tag(sync=True)
-    _view_module = Unicode("map-widget-for-juptyer").tag(sync=True)
-    _model_module = Unicode("map-widget-for-juptyer").tag(sync=True)
+    _view_module = Unicode("map-widget-for-jupyter").tag(sync=True)
+    _model_module = Unicode("map-widget-for-jupyter").tag(sync=True)
     _view_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
     _model_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
 
@@ -543,8 +543,8 @@ class Geometry(Widget):
 
     _view_name = Unicode("GeometryView").tag(sync=True)
     _model_name = Unicode("GeometryModel").tag(sync=True)
-    _view_module = Unicode("map-widget-for-juptyer").tag(sync=True)
-    _model_module = Unicode("map-widget-for-juptyer").tag(sync=True)
+    _view_module = Unicode("map-widget-for-jupyter").tag(sync=True)
+    _model_module = Unicode("map-widget-for-jupyter").tag(sync=True)
     _view_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
     _model_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
 
@@ -1327,8 +1327,8 @@ class Control(Widget):
 
     _view_name = Unicode("ControlView").tag(sync=True)
     _model_name = Unicode("ControlModel").tag(sync=True)
-    _view_module = Unicode("map-widget-for-juptyer").tag(sync=True)
-    _model_module = Unicode("map-widget-for-juptyer").tag(sync=True)
+    _view_module = Unicode("map-widget-for-jupyter").tag(sync=True)
+    _model_module = Unicode("map-widget-for-jupyter").tag(sync=True)
     _view_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
     _model_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
 
@@ -1620,8 +1620,8 @@ class Service(Widget):
 
     _view_name = Unicode("ServiceView").tag(sync=True)
     _model_name = Unicode("ServiceModel").tag(sync=True)
-    _view_module = Unicode("map-widget-for-juptyer").tag(sync=True)
-    _model_module = Unicode("map-widget-for-juptyer").tag(sync=True)
+    _view_module = Unicode("map-widget-for-jupyter").tag(sync=True)
+    _model_module = Unicode("map-widget-for-jupyter").tag(sync=True)
     _view_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
     _model_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
 
@@ -1809,8 +1809,8 @@ class Map(DOMWidget, InteractMixin):
 
     _view_name = Unicode("MapView").tag(sync=True)
     _model_name = Unicode("MapModel").tag(sync=True)
-    _view_module = Unicode("map-widget-for-juptyer").tag(sync=True)
-    _model_module = Unicode("map-widget-for-juptyer").tag(sync=True)
+    _view_module = Unicode("map-widget-for-jupyter").tag(sync=True)
+    _model_module = Unicode("map-widget-for-jupyter").tag(sync=True)
 
     api_key = Unicode("").tag(sync=True)
     center = List(def_loc).tag(sync=True, o=True)

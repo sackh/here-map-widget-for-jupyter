@@ -1,7 +1,7 @@
 Info Bubble Element
 ===================
 
-``Info Bubble`` is an ``here-map-widget-for-juptyer`` class that allows to make a information bubble and bound it to a geographic position on the Map.
+``Info Bubble`` is an ``here-map-widget-for-jupyter`` class that allows to make a information bubble and bound it to a geographic position on the Map.
 
 Example
 -------

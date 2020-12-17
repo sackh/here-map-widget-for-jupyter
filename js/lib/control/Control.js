@@ -31,8 +31,8 @@ export class ControlModel extends widgets.WidgetModel {
       //      ...super.defaults(),
       _view_name: 'ControlView',
       _model_name: 'ControlModel',
-      _view_module: 'map-widget-for-juptyer',
-      _model_module: 'map-widget-for-juptyer',
+      _view_module: 'map-widget-for-jupyter',
+      _model_module: 'map-widget-for-jupyter',
     };
   }
 }

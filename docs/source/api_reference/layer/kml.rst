@@ -1,7 +1,7 @@
 KML Layer
 ==========
 
-``KML`` is an ``here-map-widget-for-juptyer`` class that allows you to visualize `KML Data
+``KML`` is an ``here-map-widget-for-jupyter`` class that allows you to visualize `KML Data
 <https://www.ogc.org/standards/kml>`_ on the Map.
 
 Example
