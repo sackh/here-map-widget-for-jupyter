@@ -8,31 +8,31 @@ Usage
 
 **Selecting a basemap:**
 
-![basemaps](gifs/basemaps.gif)
+![basemaps](images/basemaps.gif)
 
 **Loading a geojson data on map:**
 
-![GeoJSON Screencast](gifs/geojson.gif)
+![GeoJSON Screencast](images/geojson.gif)
 
 **Making use of HERE Maps API for JavaScript primitives like Marker:**
 
-![Primitives Screencast](gifs/marker.gif)
+![Primitives Screencast](images/marker.gif)
 
 **Using the search control to search GeoJSON layer data:**
 
-![Search Control Screencast](gifs/search-control.gif)
+![Search Control Screencast](images/search-control.gif)
 
 **Displaying geopandas data on map:**
 
-![Geopandas Screencast](gifs/geo-pandas.gif)
+![Geopandas Screencast](images/geo-pandas.gif)
 
 **Displaying XYZ space data on map:**
 
-![XYZ Screencast](gifs/xyz.gif)
+![XYZ Screencast](images/xyz.gif)
 
 **Use ipywidgets controls**
 
-![Widget Control](gifs/widget-control.gif)
+![Widget Control](images/widget-control.gif)
 
 
 Installation
