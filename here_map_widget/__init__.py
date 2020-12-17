@@ -22,9 +22,9 @@
 
 
 """HERE Map Widget for Jupyter - use HERE Maps API for
-JavaScript in your Jupyter Notebook. This widget allows
-user to get a HERE Map View in Jupyter Notebook. This make analysis of
-geospatial data easy and more interactive.
+JavaScript in your Jupyter Notebook.
+This widget enables you to use the HERE Map View in Jupyter Notebook
+to make analysis ofgeospatial data easier and more interactive.
 """
 
 from ._version import __version__, version_info
