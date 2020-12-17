@@ -129,7 +129,7 @@ class Provider(Widget):
 class XYZ(Provider):
     """XYZ Provider class
 
-    Provider for fetching data from HERE XYZ API.
+    Provider for fetching data from XYZ Hub or HERE Data Hub APIs.
 
     Attributes
     ----------
