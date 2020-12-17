@@ -14,7 +14,7 @@ master_doc = 'index'
 source_suffix = '.rst'
 
 # General information about the project.
-project = 'HERE Map Widget for Juptyer'
+project = 'HERE Map Widget for Jupyter'
 copyright = '(c) 2020, HERE Technologies'
 author = 'HERE Technologies'
 

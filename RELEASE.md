@@ -1,4 +1,4 @@
-- To release a new version of HERE Map Widget for Juptyer on PyPI:
+- To release a new version of HERE Map Widget for Jupyter on PyPI:
 
 Update _version.py (set release version, remove 'dev')
 git add the _version.py file and git commit

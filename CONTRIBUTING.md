@@ -1,4 +1,4 @@
-# Contributing to HERE Map Widget for Juptyer
+# Contributing to HERE Map Widget for Jupyter
 
 Thank you for taking the time to contribute.
 

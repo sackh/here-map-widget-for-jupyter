@@ -1,16 +1,16 @@
-HERE Map Widget for Juptyer
+HERE Map Widget for Jupyter
 ===========================
 An interactive widget that enables users to use HERE Maps API for JavaScript in Jupyter Notebook.
-``HERE Map Widget for Juptyer`` builds the connection between the analytic capabilities of the `Jupyter ecosystem <https://jupyter.org/>`_ and the superior map visualization
+``HERE Map Widget for Jupyter`` builds the connection between the analytic capabilities of the `Jupyter ecosystem <https://jupyter.org/>`_ and the superior map visualization
 and location services capabilities of `HERE Maps API for JavaScript <https://developer.here.com/develop/javascript-api>`_.
 
-``HERE Map Widget for Juptyer`` is utilizing the extension system of Jupyter widgets to enhance its core functionality
+``HERE Map Widget for Jupyter`` is utilizing the extension system of Jupyter widgets to enhance its core functionality
 with a widget to create interactive maps.
 
 HERE Maps API for JavaScript offers Web Developers a JavaScript library with a rich set of functionalities and capabilities to build location-aware applications. Among other functionality, it supports 2D and 3D visualization, various data formats, an event system, and a seamless integration with
 `HERE Location Services <https://www.here.com/platform/location-based-services>`_ and `HERE Data Hub <https://developer.here.com/products/data-hub>`_.
 
-Important features of ``HERE Map Widget for Juptyer``:
+Important features of ``HERE Map Widget for Jupyter``:
 
 - Interactive HERE Map in Jupyter Notebooks
 - Tilt rotate / 3D Map appearance

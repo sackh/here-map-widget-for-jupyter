@@ -21,7 +21,7 @@
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-"""HERE Map Widget for Juptyer - use HERE Maps API for
+"""HERE Map Widget for Jupyter - use HERE Maps API for
 JavaScript in your Jupyter Notebook. This widget allows
 user to get a HERE Map View in Jupyter Notebook. This make analysis of
 geospatial data easy and more interactive.

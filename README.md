@@ -1,4 +1,4 @@
-HERE Map Widget for Juptyer
+HERE Map Widget for Jupyter
 ===========================
 
 Use [HERE Maps API for JavaScript](https://developer.here.com/develop/javascript-api) in your [Jupyter Notebook](https://jupyter.org/).
