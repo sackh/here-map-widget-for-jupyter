@@ -18,7 +18,7 @@ Usage
 
 ![Primitives Screencast](gifs/marker.gif)
 
-**Using the search control to search geojson layer data:**
+**Using the search control to search GeoJSON layer data:**
 
 ![Search Control Screencast](gifs/search-control.gif)
 
@@ -47,7 +47,7 @@ To install use pip:
     $ jupyter nbextension install --py --sys-prefix here_map_widget
     $ jupyter nbextension enable here_map_widget --py --sys-prefix
 
-To install for jupyterlab
+To install for JupyterLab
 
     $ jupyter labextension install @jupyter-widgets/jupyterlab-manager @here/map-widget-for-jupyter
 
@@ -61,12 +61,12 @@ For a development installation (requires npm),
     $ jupyter nbextension enable --py --sys-prefix here_map_widget
     $ jupyter labextension install @jupyter-widgets/jupyterlab-manager js
 
-When actively developing your extension, build Jupyter Lab with the command:
+When actively developing your extension, build JupyterLab with the command:
 
     $ jupyter lab --watch
 
-This take a minute or so to get started, but then allows you to hot-reload your javascript extension.
-To see a change, save your javascript, watch the terminal for an update.
+This take a minute or so to get started, but then allows you to hot-reload your JavaScript extension.
+To see a change, save your JavaScript, watch the terminal for an update.
 
 Note on first `jupyter lab --watch`, you may need to touch a file to get Jupyter Lab to open.
 
