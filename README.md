@@ -38,13 +38,13 @@ In order to be able to use the HERE Maps API for JavaScript with `npm` the HERE 
 
     $ npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/here-node/
     
-Install HERE Map Widget for Jupyter using the commands below:
+Install HERE Map Widget for Jupyter Notebook using the commands below:
 
     $ pip install here-map-widget-for-jupyter
     $ jupyter nbextension install --py --sys-prefix here_map_widget
     $ jupyter nbextension enable here_map_widget --py --sys-prefix
 
-Install JupyterLab via:
+Install HERE Map Widget for JupyterLab <=2:
 
     $ jupyter labextension install @jupyter-widgets/jupyterlab-manager @here/map-widget-for-jupyter
 
