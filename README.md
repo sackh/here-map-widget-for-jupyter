@@ -1,58 +1,55 @@
-HERE Map Widget for Jupyter
-===========================
+# HERE Map Widget for Jupyter
 
 Use [HERE Maps API for JavaScript](https://developer.here.com/develop/javascript-api) in your [Jupyter Notebook](https://jupyter.org/).
 
-Usage
-------------
+## Usage
 
 **Selecting a basemap:**
 
-![basemaps](images/basemaps.gif)
+![Select base map](images/basemaps.gif)
 
-**Loading a geojson data on map:**
+**Loading a GeoJSON data on a map:**
 
-![GeoJSON Screencast](images/geojson.gif)
+![Use GeoJSON on map](images/geojson.gif)
 
-**Making use of HERE Maps API for JavaScript primitives like Marker:**
+**Making use of HERE Maps API for JavaScript primitives such as Marker to draw a SVG icon on the map:**
 
-![Primitives Screencast](images/marker.gif)
+![Add marker to map](images/marker.gif)
 
 **Using the search control to search GeoJSON layer data:**
 
-![Search Control Screencast](images/search-control.gif)
+![Add search control to map](images/search-control.gif)
 
-**Displaying geopandas data on map:**
+**Displaying [GeoPandas](https://geopandas.org/) data on map:**
 
-![Geopandas Screencast](images/geo-pandas.gif)
+![Add Geopandas data to map](images/geo-pandas.gif)
 
-**Displaying XYZ space data on map:**
+**Displaying [XYZ Hub](https://github.com/heremaps/xyz-hub) or [HERE Data Hub](https://developer.here.com/products/data-hub) space data on a map:**
 
-![XYZ Screencast](images/xyz.gif)
+![Add XYZ data to map](images/xyz.gif)
 
-**Use ipywidgets controls**
+**Use [ipywidgets](https://ipywidgets.readthedocs.io/) controls to build an interactive GUI:**
 
-![Widget Control](images/widget-control.gif)
+![Add ipywidgets controls](images/widget-control.gif)
 
+## Installation
 
-Installation
-------------
-To add npm registry:
+In order to be able to use the HERE Maps API for JavaScript with `npm` the HERE public repository must be added to your `npm` configuration:
 
     $ npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/here-node/
     
-To install use pip:
+Install HERE Map Widget for Jupyter using the commands below:
 
     $ pip install here-map-widget-for-jupyter
     $ jupyter nbextension install --py --sys-prefix here_map_widget
     $ jupyter nbextension enable here_map_widget --py --sys-prefix
 
-To install for JupyterLab
+Install JupyterLab via:
 
     $ jupyter labextension install @jupyter-widgets/jupyterlab-manager @here/map-widget-for-jupyter
 
 
-For a development installation (requires npm),
+For a development installation (requires npm to be pre-installed) run:
 
     $ git clone https://github.com/heremaps/here-map-widget-for-jupyter.git
     $ cd here-map-widget-for-jupyter
@@ -61,23 +58,21 @@ For a development installation (requires npm),
     $ jupyter nbextension enable --py --sys-prefix here_map_widget
     $ jupyter labextension install @jupyter-widgets/jupyterlab-manager js
 
-When actively developing your extension, build JupyterLab with the command:
+If you are actively developing your extension, we recommend you build JupyterLab with the command below:
 
     $ jupyter lab --watch
 
-This take a minute or so to get started, but then allows you to hot-reload your JavaScript extension.
-To see a change, save your JavaScript, watch the terminal for an update.
+It does take a minute or so to get started, but then hot-reload your JavaScript extension changes.
+For every change, save your JavaScript and then watch the terminal for an update.
 
 Note on first `jupyter lab --watch`, you may need to touch a file to get Jupyter Lab to open.
 
-Documentation
--------------
-A collection of example notebooks is provided in [/examples](./examples) directory.
+## Documentation
 
-License
--------
+A collection of example notebooks is provided in the [/examples](./examples) directory.
+
+## License
 
 Copyright (C) 2019-2021 HERE Europe B.V.
 
 Unless otherwise noted in `LICENSE` files for specific directories, the [LICENSE](LICENSE) in the root applies to all content in this repository.
-
