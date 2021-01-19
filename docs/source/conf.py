@@ -15,7 +15,7 @@ source_suffix = '.rst'
 
 # General information about the project.
 project = 'HERE Map Widget for Jupyter'
-copyright = '(c) 2020, HERE Technologies'
+copyright = '(c) 2019 - 2021, HERE Europe B.V.'
 author = 'HERE Technologies'
 
 exclude_patterns = []

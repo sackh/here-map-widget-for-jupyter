@@ -1,4 +1,4 @@
-# Copyright (C) 2019 - 2020 HERE Europe B.V.
+# Copyright (C) 2019 - 2021 HERE Europe B.V.
 # SPDX-License-Identifier: MIT
 #
 # Permission is hereby granted, free of charge, to any person obtaining
