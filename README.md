@@ -72,7 +72,7 @@ Note on first `jupyter lab --watch`, you may need to touch a file to get Jupyter
 
 Documentation
 -------------
-For now documentation consists of sample notebooks in `examples` directory.
+A collection of example notebooks is provided in [/examples](./examples) directory.
 
 License
 -------
