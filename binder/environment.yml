@@ -5,6 +5,8 @@ dependencies:
   - pip
   - xyzspaces
   - jupyterlab=3
+  - nodejs
+  - yarn
   - pip:
     - "-r ../requirements.txt"
     - "-r ../requirements_dev.txt"
