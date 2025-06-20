@@ -20,5 +20,4 @@ js/.yarn/
 js/dist/
 js/node_modules/
 js/.npmrc
-js/package-lock.json
-js/yarn.lock
+js/.yarnrc.yml
