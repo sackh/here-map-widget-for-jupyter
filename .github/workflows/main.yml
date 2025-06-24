@@ -21,6 +21,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
         python-version: [3.12]
+        yarn-version: [1.22.22]
 
     steps:
     - uses: actions/checkout@v2
@@ -32,7 +33,7 @@ jobs:
         channels: conda-forge
 
     - name: Mamba install dependencies
-      run: mamba install python=${{ matrix.python-version }} pip nodejs yarn jupyter-packaging
+      run: mamba install python=${{ matrix.python-version }} pip nodejs yarn=${{ matrix.yarn-version }} jupyter-packaging
 
     - name: Mamba install JupyterLab 3
       run: mamba install jupyterlab=3.5 ipywidgets=7.6
