@@ -50,7 +50,7 @@ dev = [
 packages = ["here_map_widget"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"here_map_widget/nbextension/*.*" = "share/jupyter/nbextensions/@here/map-widget-for-jupyter/*.*"
+"here_map_widget/nbextension" = "share/jupyter/nbextensions/@here/map-widget-for-jupyter"
 "here_map_widget/labextension" = "share/jupyter/labextensions/@here/map-widget-for-jupyter"
 "./map-widget-for-jupyter.json" = "etc/jupyter/nbconfig/notebook.d/map-widget-for-jupyter.json"
 

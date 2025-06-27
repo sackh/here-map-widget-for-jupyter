@@ -45,11 +45,12 @@ jobs:
 
     - name: Check installation files
       run: |
-        test -d $CONDA/share/jupyter/nbextensions/@here/map-widget-for-jupyter
-        test -f $CONDA/share/jupyter/nbextensions/@here/map-widget-for-jupyter/extension.js
-        test -f $CONDA/share/jupyter/nbextensions/@here/map-widget-for-jupyter/index.js
-        test -d $CONDA/share/jupyter/labextensions/@here/map-widget-for-jupyter
-        test -f $CONDA/share/jupyter/labextensions/@here/map-widget-for-jupyter/package.json
+        echo "CONDA_PREFIX=$CONDA_PREFIX"
+        test -d $CONDA_PREFIX/share/jupyter/nbextensions/@here/map-widget-for-jupyter
+        test -f $CONDA_PREFIX/share/jupyter/nbextensions/@here/map-widget-for-jupyter/extension.js
+        test -f $CONDA_PREFIX/share/jupyter/nbextensions/@here/map-widget-for-jupyter/index.js
+        test -d $CONDA_PREFIX/share/jupyter/labextensions/@here/map-widget-for-jupyter
+        test -f $CONDA_PREFIX/share/jupyter/labextensions/@here/map-widget-for-jupyter/package.json
 
     - name: Lint check
       run: make lint
