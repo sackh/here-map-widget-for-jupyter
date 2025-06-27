@@ -9,6 +9,7 @@ build-backend = "hatchling.build"
 name = "here-map-widget-for-jupyter"
 description = "A widget that enables you to use HERE Maps API for JavaScript in Jupyter Notebook."
 readme = "README.md"
+license-files = ["LICENSE"]
 authors = [
     { name = "HERE Europe B.V." },
 ]
@@ -23,7 +24,6 @@ classifiers = [
     "Framework :: IPython",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
@@ -36,9 +36,6 @@ dependencies = [
     "xyzservices>=2024.4.0",
 ]
 version = "2.0.0"
-
-[project.license]
-file = "LICENSE"
 
 [project.optional-dependencies]
 dev = [

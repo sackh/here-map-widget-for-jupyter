@@ -20,6 +20,5 @@ js/.yarn/
 js/dist/
 js/node_modules/
 js/.npmrc
-js/.pnp.cjs
-js/.pnp.loader.mjs
-js/.yarnrc.yml
+js/.yarnrc
+js/yarn.lock
