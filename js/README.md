@@ -9,7 +9,7 @@ Package Install
 - [node](http://nodejs.org/)
 
 ```bash
-yarn config set @here:registry https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript
+npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript
 
 yarn add @here/map-widget-for-jupyter
 ```
