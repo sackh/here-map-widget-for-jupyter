@@ -21,6 +21,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
         python-version: [3.12]
+        yarn-version: [1.22.22]
 
     steps:
     - uses: actions/checkout@v2
@@ -29,21 +30,22 @@ jobs:
       uses: conda-incubator/setup-miniconda@v3
       with:
         mamba-version: "*"
-        channels: conda-forge
+        channels: conda-forge,defaults
 
     - name: Mamba install dependencies
-      run: mamba install python=${{ matrix.python-version }} pip nodejs jupyter-packaging
+      run: mamba install python=${{ matrix.python-version }} pip nodejs yarn=${{ matrix.yarn-version }}
 
-    - name: Mamba install JupyterLab 3
-      run: mamba install jupyterlab=3.5 ipywidgets=7.6
+    - name: Mamba install JupyterLab 4
+      run: mamba install jupyterlab=4.4.3 ipywidgets=8.1.7
 
     - name: Install here-map-widget-for-jupyter
       run: |
-        npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/here-node/
+        npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript
         pip install .[dev]
 
     - name: Check installation files
       run: |
+        echo "CONDA_PREFIX=$CONDA_PREFIX"
         test -d $CONDA_PREFIX/share/jupyter/nbextensions/@here/map-widget-for-jupyter
         test -f $CONDA_PREFIX/share/jupyter/nbextensions/@here/map-widget-for-jupyter/extension.js
         test -f $CONDA_PREFIX/share/jupyter/nbextensions/@here/map-widget-for-jupyter/index.js
@@ -59,7 +61,8 @@ jobs:
     - name: Build the package (Only on Linux for saving time)
       if: matrix.os == 'ubuntu-latest'
       run: |
-        python setup.py sdist bdist_wheel
+        pip install hatch
+        hatch build
 
     - name: Build docs (Only on Linux for saving time)
       if: matrix.os == 'ubuntu-latest'

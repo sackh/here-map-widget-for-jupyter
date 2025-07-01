@@ -16,6 +16,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         python-version: [3.12]
+        yarn-version: [1.22.22]
     steps:
     - uses: actions/checkout@v2
 
@@ -26,10 +27,10 @@ jobs:
         channels: conda-forge
 
     - name: Mamba install dependencies
-      run: mamba install python=${{ matrix.python-version }} pip nodejs yarn jupyter-packaging
+      run: mamba install python=${{ matrix.python-version }} pip nodejs yarn=${{ matrix.yarn-version }}
 
-    - name: Mamba install JupyterLab 3
-      run: mamba install jupyterlab=3.5 ipywidgets=7.6
+    - name: Mamba install JupyterLab 4
+      run: mamba install jupyterlab=4.4.3 ipywidgets=8.1.7
       
     - name: Install tools
       run: |
@@ -40,9 +41,10 @@ jobs:
         node --version
         npm --version
         yarn --version
-        npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/here-node/
+        npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript
         pip install .
-        python setup.py sdist bdist_wheel
+        pip install hatch
+        hatch build
     - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@master
       with:
@@ -56,10 +58,10 @@ jobs:
     - name: Publish to NPM
       run: |
         cd js
-        npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/here-node/
+        npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript
         npm install --legacy-peer-deps
         npm run build
-        npm config delete @here:registry https://repo.platform.here.com/artifactory/api/npm/here-node/
+        npm config delete @here:registry https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript
         npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
         npm publish --access=public
       env:

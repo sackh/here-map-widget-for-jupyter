@@ -72,7 +72,7 @@ Below extra commands are required only if you are using classic Jupyter Notebook
 
 Below extra commands are required only if you are using JupyterLab (version 2 or older):
 
-    $ npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/here-node/
+    $ npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript
 
     $ jupyter labextension install @jupyter-widgets/jupyterlab-manager @here/map-widget-for-jupyter
 
@@ -81,7 +81,7 @@ Below extra commands are required only if you are using JupyterLab (version 2 or
 
 For a development installation (requires yarn, you can install it with `conda install -c conda-forge yarn`):
 
-    $ npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/here-node/
+    $ npm config set @here:registry https://repo.platform.here.com/artifactory/api/npm/maps-api-for-javascript
     $ git clone https://github.com/heremaps/here-map-widget-for-jupyter.git
     $ cd here-map-widget-for-jupyter
     $ pip install -e .
