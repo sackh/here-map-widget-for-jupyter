@@ -1,3 +1,131 @@
 [build-system]
-requires = ["jupyter_packaging>=0.7.9", "jupyterlab>=3.0.0,==3.*", "setuptools>=40.8.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = [
+    "hatchling",
+    "hatch-requirements-txt",
+    "jupyterlab>=4.0.0,==4.*",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "here-map-widget-for-jupyter"
+dynamic = ["version", "dependencies", "optional-dependencies"]
+description = "A widget that enables you to use HERE Maps API for JavaScript in Jupyter Notebook."
+readme = "README.md"
+requires-python = ">=3.9"
+license-files = ["LICENSE"]
+authors = [
+    { name = "HERE Europe B.V." },
+]
+keywords = [
+    "here-map-widget-for-jupyter",
+    "ipython",
+    "jupyter",
+    "widgets",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: IPython",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Documentation = "https://here-map-widget-for-jupyter.readthedocs.io/en/latest/"
+Issues = "https://github.com/heremaps/here-map-widget-for-jupyter/issues"
+Source = "https://github.com/heremaps/here-map-widget-for-jupyter"
+
+[tool.hatch.version]
+path = "here_map_widget/__about__.py"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
+
+[tool.hatch.metadata.hooks.requirements_txt.optional-dependencies]
+docs = ["docs/requirements.txt"]
+
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    ".github",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["here_map_widget"]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"here_map_widget/nbextension" = "share/jupyter/nbextensions/@here/map-widget-for-jupyter"
+"here_map_widget/labextension" = "share/jupyter/labextensions/@here/map-widget-for-jupyter"
+"./map-widget-for-jupyter.json" = "etc/jupyter/nbconfig/notebook.d/map-widget-for-jupyter.json"
+
+
+[tool.hatch.build.hooks.jupyter-builder]
+ensured-targets = [
+    "here_map_widget/nbextension/index.js",
+    "here_map_widget/labextension/package.json",
+]
+dependencies = [
+    "hatch-jupyter-builder>=0.9.1",
+]
+build-function = "hatch_jupyter_builder.npm_builder"
+
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+path = "js"
+build_cmd = "build:extensions"
+npm = [
+    "yarn",
+]
+
+
+
+[tool.hatch.envs.default]
+dependencies = ["pyclean"]
+
+[tool.hatch.envs.default.scripts]
+clean-all = [
+    "cd js && yarn run cleanAll",
+    "pip uninstall -y here-map-widget-for-jupyter",
+    "pyclean . --erase js/node_modules/**/* js/node_modules/ --yes --verbose",
+    "pyclean . --debris --verbose",
+]
+clean-all-dry = [
+    "echo \"cd js && yarn run cleanAll\"",
+    "echo \"pip uninstall -y here-map-widget-for-jupyter\"",
+    "pyclean . --erase js/node_modules/**/* js/node_modules/ --yes --verbose --dry-run",
+    "pyclean . --debris --verbose --dry-run",
+]
+
+[tool.hatch.envs.lint]
+detached = true
+dependencies = [
+    "black[jupyter]",
+    "isort",
+]
+
+[tool.hatch.envs.lint.scripts]
+reformat = [
+    "black {args:.}",
+    "isort --atomic {args:.}",
+]
+check = [
+    "isort --check --diff {args:.}",
+    "black --diff --check {args:.}",
+]
+
+[tool.black]
+line-length = 99
+
+[tool.isort]
+line_length = 90
+multi_line_output = 3
+include_trailing_comma = "True"
+force_grid_wrap = 0
+use_parentheses = "True"

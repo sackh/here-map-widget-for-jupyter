@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2019-2021 HERE Europe B.V.
+  Copyright (C) 2019-2024 HERE Europe B.V.
   SPDX-License-Identifier: MIT
 */
 const layer = require('./Layer.js');
@@ -106,7 +106,7 @@ export class GeoJSONLayerView extends layer.LayerView {
       });
     });
     reader.getLayer().getProvider().addEventListener("pointermove", (evnt) => {
-      if (Object.keys(this.model.get('hover_style')).length !== 0)
+      if (Object.keys(this.model.get('hover_style')).length !== 0 && evnt.target.setStyle && typeof evnt.target.setStyle === 'function')
         evnt.target.setStyle(this.model.get('hover_style'))
       var feature = evnt.target.toGeoJSON();
       this.send({

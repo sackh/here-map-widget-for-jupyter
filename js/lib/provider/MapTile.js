@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2019-2021 HERE Europe B.V.
+  Copyright (C) 2019-2024 HERE Europe B.V.
   SPDX-License-Identifier: MIT
 */
 const provider = require('./Provider.js');
@@ -65,7 +65,7 @@ export class MapTileView extends provider.ProviderView {
       var format = this.model.get('format');
       var options = {}
       if (this.model.get('additional_params')) {
-        options['additionalParameters'] = this.model.get('additional_params');
+        Object.assign(options, this.model.get('additional_params'));
       }
       this.obj = mapTiler.createTileProvider(TileType, scheme, TileSize, format, options);
     });

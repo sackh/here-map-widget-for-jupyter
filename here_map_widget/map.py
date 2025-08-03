@@ -1,4 +1,4 @@
-# Copyright (C) 2019-2021 HERE Europe B.V.
+# Copyright (C) 2019-2024 HERE Europe B.V.
 # SPDX-License-Identifier: MIT
 
 """
@@ -8,6 +8,7 @@ This is the main script which contains all the python side model.
 import copy
 import json
 
+import xyzservices
 from branca.colormap import ColorMap, linear
 from ipywidgets import (
     Box,
@@ -17,6 +18,7 @@ from ipywidgets import (
     interactive,
     widget_serialization,
 )
+from ipywidgets.embed import embed_minimal_html
 from traitlets import (
     Any,
     Bool,
@@ -36,10 +38,33 @@ from traitlets import (
     validate,
 )
 
-from ._version import EXTENSION_VERSION
+from .__about__ import EXTENSION_VERSION
 from .configs import DefaultLayerNames
 
 def_loc = [20.5937, 78.9629]
+
+
+def basemap_to_tiles(basemap, opacity=1, **kwargs):
+    """Turn a basemap into a TileLayer object.
+
+    Parameters
+    ----------
+    basemap : class:`xyzservices.lib.TileProvider`
+        Basemap description coming from here_map_widget.basemaps.
+    opacity: Int, Optional
+        Opacity of the TileLayer, default 1.
+    kwargs: key-word arguments
+        Extra key-word arguments to pass to the ``basemap.build_url`` method.
+    """
+    url = basemap.build_url(**kwargs)
+    provider = ImageTileProvider(
+        url=url,
+        max_zoom=basemap.get("max_zoom", 19),
+        min_zoom=basemap.get("min_zoom", 1),
+        attribution=basemap.get("html_attribution", "") or basemap.get("attribution", ""),
+        opacity=opacity,
+    )
+    return TileLayer(provider=provider, name=basemap.get("name", ""))
 
 
 class InteractMixin(object):
@@ -521,7 +546,13 @@ class Choropleth(GeoJSON):
     key_on = Unicode("id")
 
     @observe(
-        "style", "style_callback", "value_min", "value_max", "geo_data", "choro_data", "colormap",
+        "style",
+        "style_callback",
+        "value_min",
+        "value_max",
+        "geo_data",
+        "choro_data",
+        "colormap",
     )
     def _update_data(self, change):
         self.data = self._get_data()
@@ -534,7 +565,9 @@ class Choropleth(GeoJSON):
     def _default_style_callback(self):
         def compute_style(feature, colormap, choro_data):
             return dict(
-                fillColor=colormap.rgb_hex_str(choro_data), strokeColor="black", weight=0.9,
+                fillColor=colormap.rgb_hex_str(choro_data),
+                strokeColor="black",
+                weight=0.9,
             )
 
         return compute_style
@@ -1005,7 +1038,12 @@ class Polygon(Object):
     _model_name = Unicode("PolygonModel").tag(sync=True)
 
     object = Union(
-        (Instance(LineString), Instance(WKT), Instance(GeoPolygon), Instance(GeoMultiPolygon),)
+        (
+            Instance(LineString),
+            Instance(WKT),
+            Instance(GeoPolygon),
+            Instance(GeoMultiPolygon),
+        )
     ).tag(sync=True, **widget_serialization)
     style = Dict().tag(sync=True)
     draggable = Bool(False).tag(sync=True)
@@ -1598,7 +1636,7 @@ class SearchControl(Control):
     _model_name = Unicode("SearchControlModel").tag(sync=True)
 
     name = Unicode("SearchControl").tag(sync=True)
-    alignment = Unicode("TOP_LEFT").tag(sync=True)
+    alignment = Unicode("LEFT_TOP").tag(sync=True)
     zoom = Float(4).tag(sync=True)
     property_name = Unicode("name").tag(sync=True)
     lang = Unicode(default_value="en-US").tag(sync=True)
@@ -1846,9 +1884,9 @@ class MarkerCluster(Provider):
 
 class ImageTileProvider(Provider):
     """ImageTileProvider class.
-    
+
     Provider for loading data from XYZ tile setvers and WMTS sources.
-    
+
     Attributes
     ----------
     url: string
@@ -1858,10 +1896,10 @@ class ImageTileProvider(Provider):
     max_zoom: Int, default 22
         The maximum supported zoom level.
     opacity: float default 1.0
-        The opacity to use for the rendering of the provided tiles in range [0..1] where 0.0 means full 
+        The opacity to use for the rendering of the provided tiles in range [0..1] where 0.0 means full
         transparent and 1.0 means full opaque.
     tile_size: Int, default 256
-        The size of a tile as edge length in pixels. 
+        The size of a tile as edge length in pixels.
         It must be 2^n where n is in the range [0 ... 30].
     headers: Dict
         A dictionaary of headers to be sent with each request made by the provider.
@@ -1936,16 +1974,44 @@ class Map(DOMWidget, InteractMixin):
     )
     basemap = Union(
         (
-            Instance(DefaultLayers, default_value=None, allow_none=True),
-            Instance(TileLayer, default_value=None, allow_none=True),
-            Instance(MapTile, default_value=None, allow_none=True),
-        )
+            Instance(DefaultLayers),
+            Instance(TileLayer),
+            Instance(MapTile),
+            Instance(xyzservices.lib.TileProvider),
+        ),
+        default_value=DefaultLayers(layer_name=DefaultLayerNames.vector.normal.map),
     ).tag(sync=True, **widget_serialization)
+
+    zoom_control = Bool(True)
 
     _view_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
     _model_module_version = Unicode(EXTENSION_VERSION).tag(sync=True)
 
     _layer_ids = List()
+
+    def __init__(self, api_key, **kwargs):
+        self.zoom_control_instance = None
+        self.api_key = api_key
+        super().__init__(**kwargs)
+        if self.zoom_control:
+            self.zoom_control_instance = ZoomControl(alignment="LEFT_TOP")
+            self.add_control(self.zoom_control_instance)
+        if isinstance(self.basemap, xyzservices.lib.TileProvider):
+            if "HEREv3" in self.basemap.name:
+                self.basemap["apiKey"] = self.api_key
+            self.basemap = basemap_to_tiles(self.basemap)
+
+    @observe("zoom_control")
+    def observe_zoom_control(self, change):
+        if change["new"]:
+            self.zoom_control_instance = ZoomControl(alignment="LEFT_TOP")
+            self.add_control(self.zoom_control_instance)
+        else:
+            if (
+                self.zoom_control_instance is not None
+                and self.zoom_control_instance in self.controls
+            ):
+                self.remove_control(self.zoom_control_instance)
 
     @validate("layers")
     def _validate_layers(self, proposal):
@@ -2110,3 +2176,15 @@ class Map(DOMWidget, InteractMixin):
         elif isinstance(item, InfoBubble):
             self.add_bubble(item)
         return self
+
+    def save(self, outfile, **kwargs):
+        """Save the Map to .html file.
+
+        Parameters
+        ----------
+        outfile: str or file-like object
+            The file to write the HTML output to.
+        kwargs: keyword-arguments
+            Extra parameters to pass to the ipywidgets.embed.embed_minimal_html function.
+        """
+        embed_minimal_html(outfile, views=[self], **kwargs)

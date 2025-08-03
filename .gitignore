@@ -1,23 +1,27 @@
-*.egg-info/
-.ipynb_checkpoints/
-dist/
-build/
-*.py[cod]
-node_modules/
 .idea/
 .vscode/
+venv/
 
-# Compiled javascript
+# Main module
+*.py[cod]
 here_map_widget/static/
-src/*
-*package-lock.json
+here_map_widget/nbextension/
+here_map_widget/labextension/
+
+# Package
+*.egg-info/
+dist/
 
 # OS X
 .DS_Store
-venv
 
-# Compiled javascript
-here_map_widget/nbextension/
-here_map_widget/labextension/
+# Notebooks
+.ipynb_checkpoints/
+
+# Source javascript
+js/.yarn/
 js/dist/
-yarn.lock
+js/node_modules/
+js/.npmrc
+js/.yarnrc
+js/yarn.lock

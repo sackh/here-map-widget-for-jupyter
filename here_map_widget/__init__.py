@@ -1,15 +1,28 @@
-# Copyright (C) 2019-2021 HERE Europe B.V.
+# Copyright (C) 2019-2024 HERE Europe B.V.
 # SPDX-License-Identifier: MIT
 
 """HERE Map Widget for Jupyter - use HERE Maps API for
-JavaScript in your Jupyter Notebook.
-This widget enables you to use the HERE Map View in Jupyter Notebook
-to make analysis ofgeospatial data easier and more interactive.
+
+JavaScript in your Jupyter notebooks.
+This widget enables you to use the HERE Map View in Jupyter notebooks
+to make geospatial data analysis easier and more interactive.
 """
 
-from ._version import __version__, version_info
+import sys
+
+import xyzservices.providers as basemaps  # noqa E501
+
+from .__about__ import __version__, version_info
 from .configs import *
 from .map import *
+
+try:
+    if "google.colab" in sys.modules:
+        from google.colab import output
+
+        output.enable_custom_widget_manager()
+except ImportError:
+    pass
 
 
 def _jupyter_nbextension_paths():
